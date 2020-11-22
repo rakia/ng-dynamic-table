@@ -1,4 +1,4 @@
-<wrapper-table [displayColumnDefs]="displayColumnDefs" [dataList]="data">
+<wrapper-table [displayColumnDefs]="displayColumnDefs" [dataList]="data" (rowSelected)="onRowSelected($event)">
 
   <!-- Row shown when there is no matching data that will be provided to the wrapper table. -->
   <tr class="mat-row" *matNoDataRow>

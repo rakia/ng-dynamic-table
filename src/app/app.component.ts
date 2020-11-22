@@ -43,4 +43,8 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit() {
     // this.dataSource.sort = this.sort;
   }
+
+  onRowSelected(row: PeriodicElement) {
+    console.log('row selected: ' + JSON.stringify(row));
+  }
 }

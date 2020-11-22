@@ -3,13 +3,14 @@ import {
   AfterContentInit,
   Component,
   ContentChildren,
+  EventEmitter,
   Input,
   QueryList,
   ViewChild,
   ContentChild,
   OnInit,
   OnChanges,
-  ViewChildren, ViewContainerRef, SimpleChanges
+  ViewChildren, ViewContainerRef, SimpleChanges, Output
 } from '@angular/core';
 import {
   MatColumnDef,
@@ -39,6 +40,7 @@ export class DynamicTableComponent<T> implements OnInit, OnChanges, AfterContent
   @Input()  displayColumnDefs: ColumnDefinition[];
   @Input()  showSelectBox:     boolean;
   @Input()  dataList:          T[];
+  @Output() rowSelected        = new EventEmitter<T>();
   selection:                   SelectionModel<T>;
   dataSource:                  MatTableDataSource<T>;
 
@@ -83,7 +85,7 @@ export class DynamicTableComponent<T> implements OnInit, OnChanges, AfterContent
   }
 
   selectRow(row: T): void {
-    // this.rowSelected.emit(row);
+    this.rowSelected.emit(row);
   }
 
   // ----START CHECKBOX LOGIC
