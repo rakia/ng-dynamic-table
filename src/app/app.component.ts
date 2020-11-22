@@ -36,7 +36,7 @@ export class AppComponent implements AfterViewInit {
     { key: 'symbol',   label: 'Symbol',   cell: (element: PeriodicElement) => element.symbol   ? `${element.symbol}`   : '' }
   ];
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  data: PeriodicElement[] = ELEMENT_DATA;
 
   // @ViewChild('sort') sort: MatSort;
 
@@ -45,10 +45,10 @@ export class AppComponent implements AfterViewInit {
   }
 
   clearTable() {
-    this.dataSource.data = [];
+    // this.dataSource.data = [];
   }
 
   addData() {
-    this.dataSource.data = ELEMENT_DATA;
+    // this.dataSource.data = ELEMENT_DATA;
   }
 }
