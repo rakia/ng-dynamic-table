@@ -1,3 +1,8 @@
+💡 🧠 Join my free email newsletter about engineering, technology, and leadership: https://rakiabensassi.substack.com
+
+You can follow me and find more of my articles here: https://rakiabensassi.medium.com/
+And if you would like to support me, you can sign up here: https://rakiabensassi.medium.com/membership
+
 # NgDynamicTable
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
